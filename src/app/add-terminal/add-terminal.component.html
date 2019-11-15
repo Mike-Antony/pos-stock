@@ -4,37 +4,49 @@
       <div class="col-md-8">
         <div class="card">
           <div class="card-header card-header-danger">
-            <h4 class="card-title">Create Profile</h4>
+            <h4 class="card-title">Terminals</h4>
             <p class="card-category">Complete your profile</p>
           </div>
           <div class="card-body">
-            <form (ngSubmit)="createUser()">
+            <form>
               <div class="row">
                 <div class="col-md-6">
                   <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Username" id="username" [(ngModel)]='userProfile.username' name = 'username'>
+                    <input matInput placeholder = "Make" type = "text">
                   </mat-form-field>
                 </div>
                 <div class="col-md-6">
                   <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Email address" type="email" id="email" [(ngModel)]='userProfile.email' name = 'email'>
+                    <input matInput placeholder = "Model" type = "text">
                   </mat-form-field>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-6">
                   <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Full Name" type="text" id="name" [(ngModel)]='userProfile.name' name = 'name' >
+                    <input matInput placeholder="Physical Terminal ID" type="number">
                   </mat-form-field>
                 </div>
                 <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Terminal Type" type="text">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-6">
                     <mat-form-field class="example-full-width">
-                      <input matInput placeholder="password" type="password" id="password" [(ngModel)]='userProfile.password' name = 'password'>
+                      <input matInput placeholder="Deployed/Rented Out" type="toggle">
                     </mat-form-field>
                   </div>
-              </div>
+                  <div class="col-md-6">
+                    <mat-form-field class="example-full-width">
+                      <input matInput placeholder="Invoice Number" type="number">
+                    </mat-form-field>
+                  </div>
+                </div>
 
-              <button mat-raised-button type="submit" class="btn btn-danger pull-right">Create Profile</button>
+              <button mat-raised-button type="submit" class="btn btn-danger pull-right">Submit Terminal</button>
               <div class="clearfix"></div>
             </form>
           </div>
