@@ -6,7 +6,6 @@ import { DeploymentsComponent } from '../../deployments/deployments.component';
 import { AddDeploymentComponent } from '../../add-deployment/add-deployment.component';
 import { AddTerminalComponent } from '../../add-terminal/add-terminal.component';
 import { UsersComponent } from '../../users/users.component';
-import { LoginComponent} from '../../login/login.component';
 
 export const AdminLayoutRoutes: Routes = [
 
@@ -17,5 +16,5 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'add-deployment', component: AddDeploymentComponent },
     { path: 'add-terminal', component: AddTerminalComponent },
     { path: 'users', component: UsersComponent},
-    { path: 'login', component: LoginComponent},
+  
 ];

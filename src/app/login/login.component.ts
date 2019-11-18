@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Login } from '../models/login-model';
-import { LoginService } from '../services/login.service';
+import { AuthService } from '../services/login.service';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { TokenStorage } from '../auth/token.storage';
 
 @Component({
   selector: 'app-login',
@@ -14,20 +15,24 @@ export class LoginComponent implements OnInit {
   login: Login = new Login();
   roleId:any;
 
-  constructor(private newSession: LoginService, private router:Router) { }
+  constructor(private authService: AuthService, private router:Router, private token: TokenStorage) { }
 
   ngOnInit() {
   }
 
-  //onSubmit. POST REQUEST TO SERVER
-  initiateLogin() {
-    // this.userProfile.password = 'Auto Generator';
-    // this.roleId = 1; //to add field for role
-    // console.log(this.login.username + ' ' + this.login.password);
-    // this.newSession.newLogin(this.roleId, this.login).subscribe(data => {
-    //   console.log('###################done ' + data);
-    // })
-    this.router.navigate(['dashboard']);
+  loginSubmit() {
+    this.authService.attemptAuth(this.login).subscribe(res => {
+      this.token.saveSessionDetails(res.responseBody.roles[0].id, res.responseBody.email);
+      console.log(this.token.getToken());
+
+      if (res.statusCode == 200) {
+        console.log(res.statusCode);
+        this.router.navigate(['dashboard']);
+      } 
+    }, error => {
+      
+      console.log(error.message);
+    });
   }
 
 

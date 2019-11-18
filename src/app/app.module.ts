@@ -10,7 +10,11 @@ import {
   AgmCoreModule
 } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthService } from './services/login.service';
+import { TokenStorage } from './auth/token.storage';
+import { Interceptor } from './auth/app.interceptor';
+import { IndexComponent } from './layouts/index/index.component';
 
 @NgModule({
   imports: [
@@ -22,16 +26,18 @@ import { HttpClientModule } from '@angular/common/http';
     ComponentsModule,
     RouterModule,
     AppRoutingModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'
-    })
+
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-
+    IndexComponent,
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    TokenStorage,
+    { provide: HTTP_INTERCEPTORS, useClass: Interceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

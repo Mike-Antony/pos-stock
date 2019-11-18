@@ -11,7 +11,7 @@ export class UserProfileService {
 
   constructor(private http: HttpClient) { }
 
-  createUserProfile(roleId:any, user:Object): Observable<Object>{
-    return this.http.post(`${this.baseURL}/users/register/${roleId}`, user);
+  createUserProfile(roleId:any, userProfile:Object): Observable<Object>{
+    return this.http.post(`${this.baseURL}/users/register/${roleId}`, userProfile);
   }
 }

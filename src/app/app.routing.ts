@@ -4,6 +4,7 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { IndexComponent } from './layouts/index/index.component';
 
 const routes: Routes =[
   // {
@@ -21,9 +22,18 @@ const routes: Routes =[
 
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'login',
     pathMatch: 'full',
-  }, {
+  }, 
+  {
+    path: '',
+    component: IndexComponent,
+    children: [{
+      path: '',
+      loadChildren: './layouts/index/index.module#IndexModule'
+    }]
+  },
+  {
     path: '',
     component: AdminLayoutComponent,
     children: [{
@@ -31,6 +41,8 @@ const routes: Routes =[
       loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
     }]
   }
+
+  
 ];
 
 @NgModule({
