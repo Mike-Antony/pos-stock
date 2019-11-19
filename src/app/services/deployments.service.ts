@@ -12,7 +12,7 @@ export class DeploymentsService {
   constructor(private http: HttpClient) { }
 
   createDeployment(userid:any, terminalid:any, deployment:Object): Observable<Object>{
-    console.log("Hello Antony "+ userid + deployment);
+    console.log("Hello Universe "+ userid + deployment);
     return this.http.post(`${this.baseURL}/deployments/create-deployment/${userid}/${terminalid}
     `, deployment);
   }

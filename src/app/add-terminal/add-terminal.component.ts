@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { addTerminals} from '../models/add-terminal-model';
+import  { TerminalService } from '../services/add-terminal.service';
+
 
 @Component({
   selector: 'app-add-terminal',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddTerminalComponent implements OnInit {
 
-  constructor() { }
+  addTerminals: addTerminals = new addTerminals();
+  terminaltypeid:any;
+  
+
+  constructor(private createTerminal: TerminalService) { }
 
   ngOnInit() {
+  }
+
+  addterminal(){
+    // this.userProfile.password = 'Auto Generator';
+    this.terminaltypeid= 1;//TODO add user id
+    console.log(this.addTerminals.make + ' ' + this.addTerminals.model );
+    this.createTerminal.createTerminal(this.terminaltypeid, this.addTerminals).subscribe(data => {
+      console.log('###########done ' + data);
+    })
   }
 
 }

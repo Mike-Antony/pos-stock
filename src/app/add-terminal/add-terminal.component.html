@@ -8,20 +8,20 @@
             <p class="card-category">Complete your profile</p>
           </div>
           <div class="card-body">
-            <form>
+            <form (ngSubmit)="addterminal()">
               <div class="row">
                 <div class="col-md-6">
                   <mat-form-field class="example-full-width">
-                    <input matInput placeholder = "Make" type = "text">
+                    <input matInput placeholder = "Make" type = 'text'  id = 'make'  name='make' [(ngModel)]='addTerminals.make'>
                   </mat-form-field>
                 </div>
                 <div class="col-md-6">
                   <mat-form-field class="example-full-width">
-                    <input matInput placeholder = "Model" type = "text">
+                    <input matInput placeholder = "Model" type = 'text' id = 'model'  name='model' [(ngModel)]='addTerminals.model'>
                   </mat-form-field>
                 </div>
               </div>
-              <div class="row">
+              <!-- <div class="row">
                 <div class="col-md-6">
                   <mat-form-field class="example-full-width">
                     <input matInput placeholder="Physical Terminal ID" type="number">
@@ -44,7 +44,7 @@
                       <input matInput placeholder="Invoice Number" type="number">
                     </mat-form-field>
                   </div>
-                </div>
+                </div> -->
 
               <button mat-raised-button type="submit" class="btn btn-danger pull-right">Submit Terminal</button>
               <div class="clearfix"></div>
