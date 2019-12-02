@@ -25,6 +25,8 @@ export class AddDeploymentComponent implements OnInit {
     console.log(this.addDeployments.address + ' ' + this.addDeployments.city + ' ' + this.addDeployments.deploymentNoteNumber + ' ' + this.addDeployments.merchantCode + ' ' + this.addDeployments.merchantPhoneNumber + this.addDeployments.merchantName);
     this.createDeployment.createDeployment(this.userid,this.terminalid, this.addDeployments).subscribe(data => {
       console.log('###########done ' + data);
+      
     })
+    
   }
 }

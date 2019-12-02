@@ -10,6 +10,9 @@ import { TerminalsComponent } from '../../Terminals/terminals.component';
 import { AddDeploymentComponent } from '../../add-deployment/add-deployment.component';
 import { AddTerminalComponent } from '../../add-terminal/add-terminal.component';
 import { UsersComponent} from '../../users/users.component';
+import { CSVUploadComponent } from '../../csv-upload/csv-upload.component';
+
+
 
 
 import {
@@ -43,6 +46,7 @@ import {
     AddDeploymentComponent,
     AddTerminalComponent,
     UsersComponent,
+    CSVUploadComponent
 
   ]
 })

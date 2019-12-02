@@ -14,4 +14,24 @@ export class UserProfileService {
   createUserProfile(roleId:any, userProfile:Object): Observable<Object>{
     return this.http.post(`${this.baseURL}/users/register/${roleId}`, userProfile);
   }
+
+  getUsers():Observable<any>{
+    return this.http.get(`${this.baseURL}/users
+    `);
+  }
+
+  getUsersById(id:any):Observable<any>{
+    return this.http.get(`${this.baseURL}/users/${id}`);
+  }
+
+  deleteUsersByid(id:any):Observable<any>{
+    return this.http.delete(`${this.baseURL}/users/delete/${id}`);
+  }
+
+  updateUsers(id:any ,value:any):Observable<any>{
+    return this.http.put(`${this.baseURL}`, value);
+  }
+
+  
+
 }

@@ -12,6 +12,7 @@ export class DeploymentsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
  

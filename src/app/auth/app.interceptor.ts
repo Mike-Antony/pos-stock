@@ -23,7 +23,7 @@ export class Interceptor implements HttpInterceptor {
         if (token) {
             request = request.clone({ headers: request.headers.set('Authorization', token) });
         }
-
+        
         request = request.clone({ headers: request.headers.set('Accept', 'application/json') });
 
         return next.handle(request).pipe(
@@ -45,4 +45,5 @@ export class Interceptor implements HttpInterceptor {
                 return throwError(error);
             }));
     }
+  
 }

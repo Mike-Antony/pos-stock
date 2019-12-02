@@ -6,3 +6,4 @@ merchantCode:string;
 merchantName:string;
 merchantPhoneNumber:string;
 }
+

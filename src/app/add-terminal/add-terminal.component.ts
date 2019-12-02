@@ -12,11 +12,14 @@ export class AddTerminalComponent implements OnInit {
 
   addTerminals: addTerminals = new addTerminals();
   terminaltypeid:any;
+  public errorMsg;
+  
   
 
   constructor(private createTerminal: TerminalService) { }
 
   ngOnInit() {
+    
   }
 
   addterminal(){
@@ -25,7 +28,10 @@ export class AddTerminalComponent implements OnInit {
     console.log(this.addTerminals.make + ' ' + this.addTerminals.model );
     this.createTerminal.createTerminal(this.terminaltypeid, this.addTerminals).subscribe(data => {
       console.log('###########done ' + data);
-    })
+     
+    }
+    ,error => this.errorMsg = error
+    );
   }
 
 }

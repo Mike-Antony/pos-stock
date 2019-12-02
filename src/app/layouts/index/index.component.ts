@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+// import { File } from '@ionic-native/file/ngx';
+// import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 
 @Component({
   selector: 'app-index',

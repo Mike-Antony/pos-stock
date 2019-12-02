@@ -15,10 +15,14 @@ import { AuthService } from './services/login.service';
 import { TokenStorage } from './auth/token.storage';
 import { Interceptor } from './auth/app.interceptor';
 import { IndexComponent } from './layouts/index/index.component';
+import { PapaParseModule} from 'ngx-papaparse';
+// import { File } from '@ionic-native/file/ngx';
+// import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 
 @NgModule({
   imports: [
     BrowserAnimationsModule,
+    PapaParseModule,
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
@@ -35,6 +39,8 @@ import { IndexComponent } from './layouts/index/index.component';
   ],
   providers: [
     AuthService,
+    // File,
+    // SocialSharing,
     TokenStorage,
     { provide: HTTP_INTERCEPTORS, useClass: Interceptor, multi: true }
   ],

@@ -13,6 +13,8 @@ export const ROUTES: RouteInfo[] = [
     { path: '/users', title: 'Users',  icon:'person', class: '' },
     { path: '/deployments', title: 'Deployment',  icon:'description', class: '' },
     { path: '/terminals', title: 'Terminals',  icon:'content_paste', class: '' },
+    // { path: '/csv-upload', title: 'Upload File',  icon:'content_paste', class: '' },
+    { path: '/login', title: 'Logout', icon:'logout', class: ''}
     // { path: '/typography', title: 'Typography',  icon:'library_books', class: '' },
     // { path: '/icons', title: 'Icons',  icon:'bubble_chart', class: '' },
     // { path: '/maps', title: 'Maps',  icon:'location_on', class: '' },

@@ -16,4 +16,38 @@ export class DeploymentsService {
     return this.http.post(`${this.baseURL}/deployments/create-deployment/${userid}/${terminalid}
     `, deployment);
   }
+
+  getDeployments(): Observable<any>{
+    
+    return this.http.get(`${this.baseURL}/deployment`);
+    }
+
+  deleteDeployment(id:any): Observable<any> {
+      return this.http.delete(`${this.baseURL}/deployment/${id}`);
+    }
+
+  getDeploymentsById(id:any): Observable<any>{
+    return this.http.get(`${this.baseURL}
+    /deployments/${id}`);
+  }
+
+  getDeploymentsCreatedByUser(userid:any):Observable<any>{
+    return this.http.get(`${this.baseURL}
+    /deployments/created-by-user/${userid}`);
+  }
+
+  getDeploymentsByDeplymentNote():Observable<any>{
+    return this.http.get(`${this.baseURL}/deployments/deployment-by-deployment-note-number
+    `);
+  }
+
+  getDeploymentsByMerchantCode():Observable<any>{
+    return this.http.get(`${this.baseURL}/deployments/deployment-by-merchant-code`);
+  }
+
+  
+
 } 
+
+
+
