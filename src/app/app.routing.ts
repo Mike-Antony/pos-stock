@@ -25,6 +25,10 @@ const routes: Routes =[
     redirectTo: 'login',
     pathMatch: 'full',
   }, 
+  // {
+  //   path: '**',
+  //   redirectTo: 'login',
+  // },
   {
     path: '',
     component: IndexComponent,

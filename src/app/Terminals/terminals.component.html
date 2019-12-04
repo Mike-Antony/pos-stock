@@ -24,18 +24,25 @@
                                     <th>
                                         Model
                                     </th>
-                                    <th>
+                                    <!-- <th>
                                         Physical Terminal ID
-                                    </th>
+                                    </th> -->
                                     <th>
                                         Terminal Type
                                     </th>
-                                    <th>
+                                    <!-- <th>
                                         Deployed/Rented Out
+                                    </th> -->
+                                    <th>
+                                        Date
                                     </th>
                                     <th>
-                                        Action
+                                        Edit
                                     </th>
+                                    <th>
+                                        Delete
+                                    </th>
+                                    
                                     
 
                                 </thead>
@@ -53,24 +60,32 @@
                                         <td>
                                             Oud-Turnhout
                                         </td>
-                                        <td class="text-primary">
+                                        <!-- <td class="text-primary">
                                             $36,738
+                                        </td> -->
+                                        <!-- <td class="text-primary">
+                                            $36,738
+                                        </td> -->
+                                        <td>
+                                            20/11/2019
                                         </td>
                                         <td class="text-primary">
-                                            $36,738
-                                        </td>
-                                        <td class="text-primary">
-                                            <div class="col-md-9">
-                                                <button mat-raised-button type="submit" routerLink="/add-terminal" class="btn btn-danger pull-right" style="width:100%;">Edit
+                                            <!-- <div class="col-md-1"> -->
+                                                <button mat-raised-button type="button" matTooltip="Edit" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                                    <i class="material-icons">edit</i>
                                                     </button>
-                                                <div class="clearfix"></div>
-                                            </div>
-                                                <div class="col-md-9">
-                                                    <button mat-raised-button type="submit" routerLink="/add-terminal" class="btn btn-danger pull-right" style="width:100%;">Delete
-                                                        </button>
-                                                    <div class="clearfix"></div>
-                                                </div>
+                                                <!-- <div class="clearfix"></div> -->
+                                                <!-- </div> -->
                                         </td>
+                                        <td>
+                                                <!-- <div class="col-md-1"> -->
+                                                <button mat-raised-button type="button" matTooltip="Delete" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                                    <i class="material-icons">delete</i>
+                                                    </button>
+                                                <!-- <div class="clearfix"></div> -->
+                                            <!-- </div> -->
+                                        </td>
+                                       
                                     </tr>
                                 </tbody>
                             </table>

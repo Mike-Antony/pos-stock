@@ -10,7 +10,19 @@
                 <button mat-raised-button type="submit" routerLink="/csv-upload" class="btn btn-danger pull-right" style="width:100%;">Upload File
                     </button>
                 <div class="clearfix"></div> -->
+                
+                    <div class="col-md-6">
+                        <button mat-raised-button type="submit" routerLink="/add-deployment" class="btn btn-danger pull-right" style="width:100%;">Add New Deployment
+                            </button>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <button mat-raised-button type="submit" routerLink="/csv-upload" class="btn btn-danger pull-right" style="width:100%;">Upload File
+                            </button>
+                        <div class="clearfix"></div>
+                    </div>
             </div>
+            
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header card-header-danger">
@@ -38,12 +50,19 @@
                                     <th>
                                         Location
                                     </th>
-                                    <th>
+                                    <!-- <th>
                                         Deployed By
+                                    </th> -->
+                                    <th>
+                                        Date
                                     </th>
                                     <th>
-                                        Action
+                                        Edit
                                     </th>
+                                    <th>
+                                        Delete
+                                    </th>
+                                    
                                 </thead>
                                 <tbody>
                                     <tr>
@@ -65,8 +84,11 @@
                                         <td class="text-primary">
                                             101 union
                                         </td>
-                                        <td class="text-primary">
+                                        <!-- <td class="text-primary">
                                             25/06/2019
+                                        </td> -->
+                                        <td>
+                                            20/11/2019
                                         </td>
                                         <td class="text-primary">
                                             <!-- <div class="col-md-1"> -->
@@ -84,6 +106,7 @@
                                                 <!-- <div class="clearfix"></div> -->
                                             <!-- </div> -->
                                         </td>
+                                        
                                     </tr>
                                 </tbody>
                             </table>
@@ -92,7 +115,7 @@
                 </div>
             </div>
         </div>
-         <div class="row">
+         <!-- <div class="row">
             <div class="col-md-6">
                 <button mat-raised-button type="submit" routerLink="/add-deployment" class="btn btn-danger pull-right" style="width:100%;">Add New Deployment
                     </button>
@@ -102,6 +125,6 @@
                 <button mat-raised-button type="submit" routerLink="/csv-upload" class="btn btn-danger pull-right" style="width:100%;">Upload File
                     </button>
                 <div class="clearfix"></div>
-            </div>
-    </div>
+            </div> -->
+    <!-- </div> -->
 </div>

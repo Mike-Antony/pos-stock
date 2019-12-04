@@ -9,7 +9,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header card-header-danger">
-                        <h4 class="card-title ">Deployment Notes</h4>
+                        <h4 class="card-title ">Users</h4>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -28,8 +28,15 @@
                                       Email
                                     </th>
                                     <th>
-                                        Action
+                                        Date
                                     </th>
+                                    <th>
+                                        Edit
+                                    </th>
+                                    <th>
+                                        Delete
+                                    </th>
+                                   
                                 </thead>
                                 <tbody>
                                     <tr>
@@ -37,26 +44,34 @@
                                             1
                                         </td>
                                         <td>
-                                            Dakota Rice
+                                            John Doe
                                         </td>
                                         <td>
-                                            Niger
+                                            John
                                         </td>
                                         <td>
-                                            Oud-Turnhout
+                                            John@gmail.com
+                                        </td>
+                                        <td>
+                                            20/11/2019
                                         </td>
                                         <td class="text-primary">
-                                            <div class="col-md-9">
-                                                <button mat-raised-button type="submit" routerLink="/add-deployment" class="btn btn-danger pull-right" style="width:100%;">Edit
-                                                    </button>
-                                                <div class="clearfix"></div>
-                                            </div>
-                                            <div class="col-md-9">
-                                                <button mat-raised-button type="submit" routerLink="/add-deployment" class="btn btn-danger pull-right" style="width:100%;">Delete
-                                                    </button>
-                                                <div class="clearfix"></div>
-                                            </div>
-                                        </td>
+                                                <!-- <div class="col-md-1"> -->
+                                                    <button mat-raised-button type="button" matTooltip="Edit" routerLink="/user-profile" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                                        <i class="material-icons">edit</i>
+                                                        </button>
+                                                    <!-- <div class="clearfix"></div> -->
+                                                    <!-- </div> -->
+                                            </td>
+                                            <td>
+                                                    <!-- <div class="col-md-1"> -->
+                                                    <button mat-raised-button type="button" matTooltip="Delete" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                                        <i class="material-icons">delete</i>
+                                                        </button>
+                                                    <!-- <div class="clearfix"></div> -->
+                                                <!-- </div> -->
+                                            </td>
+                                            
                                        
                                         <!-- <td class="text-primary">
                                             <div class="col-md-12">
